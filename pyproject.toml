@@ -19,7 +19,7 @@ dependencies = {file = "requirements.txt"}
 [tool.setuptools.packages.find]
 where = ["."]
 include = [
-    "aoc",
+    "jonas_aoc",
 ]
 
 [tool.black]
@@ -41,7 +41,7 @@ disable_warnings = [
 ]
 parallel = true
 source_pkgs = [
-    "aoc",
+    "jonas_aoc",
 ]
 
 [tool.coverage.report]
@@ -149,7 +149,7 @@ deps =
     mypy
     pytest
 commands =
-    python -m mypy -p aoc
+    python -m mypy -p jonas_aoc
     python -m mypy tests/
 
 [testenv:black]
@@ -157,7 +157,7 @@ description = run format checks
 deps =
     black
 commands =
-    python -m black --check aoc/ tests/
+    python -m black --check jonas_aoc/ tests/
 skip_install = true
 
 [testenv:ruff]
@@ -165,6 +165,6 @@ description = run lint checks
 deps =
     ruff
 commands =
-    python -m ruff aoc/ tests/
+    python -m ruff jonas_aoc/ tests/
 skip_install = true
 """
