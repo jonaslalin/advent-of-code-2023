@@ -1,9 +1,10 @@
 import pytest
+
 from jonas_aoc.day05 import SourceToDestinationMap, SourceToDestinationMaps
 
 
 @pytest.mark.parametrize(
-    ["seed", "expected_soil"],
+    ("seed", "expected_soil"),
     [
         (79, 81),
         (14, 14),

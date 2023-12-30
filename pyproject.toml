@@ -92,8 +92,8 @@ target-version = "py38"
 legacy_tox_ini = """
 [tox]
 env_list =
-    py{312}
-    mypy-py{312}
+    py{38, 39, 310, 311, 312}
+    mypy-py{38, 39, 310, 311, 312}
     black
     ruff
 skip_missing_interpreters = true
@@ -117,7 +117,7 @@ labels =
     coverage
 skip_install = true
 
-[testenv:coveragerun-py{312}]
+[testenv:coveragerun-py{38, 39, 310, 311, 312}]
 description = measure code coverage
 deps =
     coverage[toml]
@@ -137,13 +137,13 @@ commands =
     python -m coverage combine
     python -m coverage report
 depends =
-    coveragerun-py{312}
+    coveragerun-py{38, 39, 310, 311, 312}
 labels =
     coverage
 skip_install = true
 parallel_show_output = true
 
-[testenv:mypy-py{312}]
+[testenv:mypy-py{38, 39, 310, 311, 312}]
 description = run type checks
 deps =
     mypy
